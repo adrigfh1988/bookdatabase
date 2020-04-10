@@ -1,0 +1,11 @@
+version: '2'
+services:
+  bookdatabase-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/bookdatabase/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=bookdatabase
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
