@@ -1,0 +1,32 @@
+entity Book {
+   ISBN String required,
+   name String required,
+   typeOfBook TypeOfBook,  
+   description String,
+   publicationDate Instant      
+}
+
+entity Author {
+	name String required,
+    lastName String,
+    image ImageBlob,
+    about String
+
+}
+
+relationship ManyToMany {
+  Book{authors} to Author{books}
+}
+
+enum TypeOfBook {
+    Paperback , Ebook, PDF
+}
+
+// Set pagination options
+paginate Book, Author with infinite-scroll
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

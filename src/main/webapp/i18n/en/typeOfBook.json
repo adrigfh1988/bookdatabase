@@ -1,0 +1,10 @@
+{
+  "bookdatabaseApp": {
+    "TypeOfBook": {
+      "null": "",
+      "Paperback": "Paperback",
+      "Ebook": "Ebook",
+      "PDF": "PDF"
+    }
+  }
+}
